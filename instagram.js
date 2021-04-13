@@ -168,3 +168,12 @@ Usuario.findByPk(1,{include:['posts']}).then(
         sequelize.close();
     }
 )
+// Post.findByPk(1, { include: ['comentarios'] }).then((post) => {
+//     console.log(post.toJSON());
+//     sequelize.close();
+//   });
+
+Post.findByPk(1, { include: ["curtiu"] }).then((post) => {
+    console.log(post.toJSON());
+    sequelize.close();
+  });
